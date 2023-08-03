@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-8k152&md7(nocx(3ip3&g(w0$fs%2#+!thm7#-(crtyes!ot3o
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['https://demo-jade-chi.vercel.app/']
 
 
 # Application definition
