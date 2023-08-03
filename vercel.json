@@ -1,24 +1,13 @@
 {
-    "version": 2,
-    "builds": [
-      {
-        "src": "manage.py",
+    "builds": [{
+        "src": "demo/wsgi.py",
         "use": "@vercel/python",
-        "config": {
-          "maxLambdaSize": "50mb"
-        }
-      }
-    ],
+        "config": { "maxLambdaSize": "15mb", "runtime": "python3.9" }
+    }],
     "routes": [
-      { "src": "/(.*)", "dest": "manage.py" }
-    ],
-    "env": {
-      "DJANGO_SETTINGS_MODULE": "demo.settings"
-    },
-    "build": {
-      "env": {
-        "PIP_INSTALL": "psycopg2-binary"
-      }
-    }
-  }
-  
+        {
+            "src": "/(.*)",
+            "dest": "demo/wsgi.py"
+        }
+    ]
+}
